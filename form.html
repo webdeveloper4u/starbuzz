@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Starbuzz Bean Machine</title>
+</head>
+<body>
+	<h1>Starbuzz Bean Machine</h1>
+	<h2>Заполните следующую форму и нажмите кнопку «Заказать сейчас»,
+чтобы оформить заказ</h2>
+<form action="http://starbuzzcoffee.com/processorder.php" method=" POST">
+	<div>
+		<p>Выберите кофе:
+			<select name="beans">
+				<option value="Домашняя смесь">Домашняя смесь</option>
+				<option value="Боливия">Боливия</option>
+				<option value="Гватемала">Гватемала</option>
+				<option value="Кения">Кения</option>
+			</select>
+		</p>
+	</div>
+	<br/>
+	<div>
+		Тип:
+			<p><input type="radio" name="typ" value="зерна" /> Кофе в зернах</p>
+			<p><input checked type="radio" name="typ" value="молотый" />Молотый</p>
+	</div>
+	<br/>
+	<div>
+		<p>Количество пакетиков:
+		<input type="number" name="bags" min="1" max="15"></p>
+	
+		<p>Доставить к указанной дате: 
+			<input type="date" name="date">
+		</p>
+	</div>
+	<br/>
+	<div>
+		Дополнительные услуги:
+			<p><input type="checkbox" name="extras[]" value="подарочная упаковка">Подарочная упаковка</p>
+			<p><input checked type="checkbox" name="extras[]" value="каталог" >Доставка каталога вместе с заказом</p>
+	</div>
+	<br/>
+	<div>
+		Доставить по адресу
+		<p>Имя: <input type="text" name="name" /></p>
+		<p>Адрес: <input type="text" name="address"/></p>
+		<p>Город: <input type="text" name="city"/></p>
+		<p>Страна: <input type="text" name="state" /></p>
+		<p>Почтовый индекс: <input type="text" name="zip"/></p>
+		<p>Телефон: <input type="tel" name="phone"/></p>
+	</div>
+	<br/>
+	<div>
+		<p>Комментарии клиентов:</p>
+			<textarea name="text" name="comments"></textarea>
+	</div>
+	<br/>
+	<div>
+		<input type="submit" value="Заказать сейчас" />
+	</div>
+</form>
+</body>
+</html>
